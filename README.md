@@ -2,7 +2,7 @@
 
 Welcome to the official website for **Jaya Banala**, a Life Transformation Specialist empowering individuals through ancient wisdom, modern affirmations, and spiritual science.
 
-This project is designed and developed by [ElaraEdgeX](https://github.com/ElaraEdgeX) as a portfolio site for Jaya's services, books, and content — blending **Vedic philosophy with modern personal development**.
+This project is designed and developed by [ElaraEdgeX](https://ElaraEdgeX.co.uk) as a portfolio site for Jaya's services, books, and content — blending **Vedic philosophy with modern personal development**.
 
 ---
 
