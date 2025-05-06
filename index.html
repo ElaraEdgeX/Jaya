@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vedara | From Vedas to Vision</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #fefae0;
+      --header-bg: #d6ad60;
+      --card-bg: #ffffff;
+      --text-dark: #1d1d1d;
+      --cta-bg: #f4a261;
+      --cta-hover: #e76f51;
+      --link-text: #d17a00;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      background-color: var(--header-bg);
+      color: white;
+    }
+
+    .title-primary {
+      color: var(--cta-bg);
+    }
+
+    .btn-primary {
+      background-color: var(--cta-bg);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--cta-hover);
+    }
+
+    .link-highlight {
+      color: var(--link-text);
+    }
+
+    .link-highlight:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="images/logo.png" alt="Vedara Logo" class="h-14 w-auto rounded">
+        <div>
+          <h1 class="text-2xl font-bold tracking-wide text-white">Vedara</h1>
+          <p class="text-sm italic text-white">From Vedas to Vision</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="underline font-semibold text-white">Home</a>
+        <a href="about.html" class="text-white hover:underline">About</a>
+        <a href="blog.html" class="text-white hover:underline">Blog</a>
+        <a href="courses.html" class="text-white hover:underline">Courses</a>
+        <a href="contact.html" class="text-white hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 title-primary">Transform Your Life Today</h2>
+      <p class="mb-6 text-lg">Empowering you to live with purpose, passion, and clarity. Start your journey now.</p>
+      <a href="contact.html?subject=Free%20Session%20Booking" class="btn-primary px-6 py-3 rounded font-semibold shadow inline-block">Book a Free Session</a>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section class="py-12 px-4 max-w-4xl mx-auto text-center">
+    <h3 class="text-2xl font-bold mb-4 title-primary">Meet Jaya Banala</h3>
+    <div class="flex justify-center mb-6">
+        <img src="images/jaya.jpg" alt="Jaya Banala" class="rounded-full w-56 h-56 object-cover shadow-lg">
+    </div>
+    <p class="text-lg">Jaya is a life transformation specialist helping people unlock their true potential through holistic and science-backed coaching methods.</p>
+    <a href="about.html" class="mt-4 inline-block font-medium link-highlight">Learn more about Jaya →</a>
+  </section>
+
+  <!-- Collaborate with Me Section -->
+  <section id="services" class="py-12 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8 title-primary">Collaborate with Me</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+
+        <!-- Vedic Classes -->
+        <div class="p-6 rounded-lg shadow-md card">
+          <img src="images/VedicClass.png" alt="Vedic Class" class="w-full h-40 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2 title-primary">Vedic Classes</h3>
+          <p class="text-sm mb-4">Starting a new session. Enrol now!</p>
+          <a href="contact.html?subject=Vedic%20Classes" class="btn-primary px-4 py-2 rounded text-sm font-semibold shadow inline-block">Enrol</a>
+        </div>
+
+        <!-- My Books -->
+        <div class="p-6 rounded-lg shadow-md card">
+          <img src="images/My Books.png" alt="My Books" class="w-full h-40 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2 title-primary">My Books</h3>
+          <p class="text-sm mb-4">Explore my Amazon bestsellers—empowering reads on self-love, mindset, and soulful transformation!</p>
+          <a href="books.html" class="btn-primary px-4 py-2 rounded text-sm inline-block">View Books</a>
+        </div>
+
+        <!-- Courses -->
+        <div class="p-6 rounded-lg shadow-md card">
+          <img src="images/thumbnail4.jpg" alt="Courses" class="w-full h-40 object-cover rounded mb-4">
+          <h3 class="text-xl font-semibold mb-2 title-primary">Courses</h3>
+          <p class="text-sm mb-4">I create personal development videos and prayer therapy videos online.</p>
+          <a href="course.html#courses" class="btn-primary px-4 py-2 rounded text-sm inline-block">Watch</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 mt-12">
+    &copy; 2025 Vedara. All rights reserved.<br/>
+    <span class="text-sm italic">From Vedas to Vision</span>
+  </footer>
+
+</body>
+</html>

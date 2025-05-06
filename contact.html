@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Jaya Banala</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="images/logo.png" alt="Logo" class="h-12 w-auto">
+        <div>
+          <h1 class="text-xl font-bold">Jaya Banala</h1>
+          <p class="text-sm">Life Transformation Specialist</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="underline font-semibold text-white">Home</a>
+        <a href="about.html" class="text-white hover:underline">About</a>
+        <a href="blog.html" class="text-white hover:underline">Blog</a>
+        <a href="courses.html" class="text-white hover:underline">Courses</a>
+        <a href="contact.html" class="text-white hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="py-12 px-4 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+    <p class="text-center text-gray-600 mb-10">Have questions, feedback, or want to book a session? Send a message below.</p>
+
+    <form action="https://formspree.io/f/xkgrrlna" method="POST" class="space-y-6 bg-gray-50 p-6 rounded shadow">
+      <div>
+        <label for="name" class="block font-medium mb-1">Name</label>
+        <input type="text" id="name" name="name" required class="w-full border border-gray-300 p-2 rounded">
+      </div>
+      <div>
+        <label for="email" class="block font-medium mb-1">Email</label>
+        <input type="email" id="email" name="_replyto" required class="w-full border border-gray-300 p-2 rounded">
+      </div>
+      <div>
+        <label for="message" class="block font-medium mb-1">Message</label>
+        <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 p-2 rounded"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 font-semibold">Send Message</button>
+    </form>
+
+    <p class="text-sm text-center mt-6 text-gray-500">This form is powered by <a href="https://formspree.io" target="_blank" class="text-blue-600 underline">Formspree</a>. Replace the form action with your own Formspree URL.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-4 mt-12">
+    &copy; 2025 Jaya Banala. All rights reserved.
+  </footer>
+  <script>
+    // Auto-fill message field from URL parameter (e.g. ?subject=Vedic Classes)
+    const urlParams = new URLSearchParams(window.location.search);
+    const subject = urlParams.get('subject');
+    if (subject) {
+      const messageField = document.getElementById('message');
+      messageField.value = `I'm interested in ${subject}. Please share more details.`;
+    }
+  </script>
+</body>
+</html>

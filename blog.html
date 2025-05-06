@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Vedara</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #fefae0;
+      --header-bg: #d6ad60;
+      --text-dark: #1d1d1d;
+      --accent: #f4a261;
+      --accent-hover: #e76f51;
+      --link: #d17a00;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      background-color: var(--header-bg);
+      color: white;
+    }
+
+    .title-primary {
+      color: var(--accent);
+    }
+
+    a {
+      color: var(--link);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="images/logo.png" alt="Vedara Logo" class="h-12 w-auto rounded">
+        <div>
+          <h1 class="text-xl font-bold text-white">Vedara</h1>
+          <p class="text-sm italic text-white">From Vedas to Vision</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="underline font-semibold text-white">Home</a>
+        <a href="about.html" class="text-white hover:underline">About</a>
+        <a href="blog.html" class="text-white hover:underline">Blog</a>
+        <a href="courses.html" class="text-white hover:underline">Courses</a>
+        <a href="contact.html" class="text-white hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Post -->
+  <section class="py-12 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center title-primary">Blog of the Specialist</h2>
+
+    <article class="space-y-6 text-lg leading-relaxed">
+      <p><strong>Logical mind is not for decision making.</strong></p>
+
+      <p>The logical mind is excellent for analysis, problem-solving, and structuring information, but it is not always the best tool for decision-making, especially in complex, emotional, or purpose-driven choices. Here’s why:</p>
+
+      <h3 class="text-xl font-semibold mt-6 title-primary">1. The Role of the Logical Mind</h3>
+      <p>The logical mind, driven by reasoning and rational thought, works based on past data, probabilities, and tangible facts. It excels in structured environments—mathematics, science, and technical problem-solving. However, decision-making often involves uncertainty, emotions, intuition, and values, which the logical mind struggles to quantify.</p>
+
+      <h3 class="text-xl font-semibold mt-6 title-primary">2. Why the Logical Mind Alone Falls Short</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Decisions Involve Emotions:</strong> Neuroscientific studies (like those by Antonio Damasio) show that emotions are crucial for making decisions. Without emotions, even simple choices become difficult.</li>
+        <li><strong>Analysis Paralysis:</strong> Overanalysis leads to indecision or fear-based choices instead of bold, intuitive ones.</li>
+        <li><strong>Lack of Future Vision:</strong> The logical mind is risk-averse. Growth often requires trust in intuition or creative insight.</li>
+        <li><strong>Spiritual Decisions:</strong> Major life choices need more than facts; they require gut instinct and alignment with inner purpose.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 title-primary">3. The Balance: Logic + Intuition</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>✅ Use logic to analyse risks, benefits, and practicality.</li>
+        <li>✅ Use intuition to check alignment — does this feel right?</li>
+        <li>✅ Let emotions guide long-term joy and fulfilment.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-6 title-primary">Conclusion</h3>
+      <p>The logical mind is a tool, but decision-making is a whole-body process — it involves logic, intuition, emotions, and higher wisdom. The most meaningful choices in life are rarely made by logic alone!</p>
+    </article>
+
+    <div class="text-center mt-10">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-12">
+    &copy; 2025 Vedara. All rights reserved.
+  </footer>
+
+</body>
+</html>

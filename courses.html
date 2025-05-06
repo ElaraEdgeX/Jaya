@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses - Vedara</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #fefae0;
+      --header-bg: #d6ad60;
+      --card-bg: #ffffff;
+      --text-dark: #1d1d1d;
+      --cta-bg: #f4a261;
+      --cta-hover: #e76f51;
+      --link-color: #d17a00;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      background-color: var(--header-bg);
+      color: white;
+    }
+
+    .btn-primary {
+      background-color: var(--cta-bg);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--cta-hover);
+    }
+
+    .card {
+      background-color: var(--card-bg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="images/logo.png" alt="Vedara Logo" class="h-12 w-auto rounded">
+        <div>
+          <h1 class="text-xl font-bold text-white">Vedara</h1>
+          <p class="text-sm italic text-white">From Vedas to Vision</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="underline font-semibold text-white">Home</a>
+        <a href="about.html" class="text-white hover:underline">About</a>
+        <a href="blog.html" class="text-white hover:underline">Blog</a>
+        <a href="courses.html" class="text-white hover:underline">Courses</a>
+        <a href="contact.html" class="text-white hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section: Jaya's Courses -->
+  <section class="py-12 px-4 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10 text-[#f4a261]">Jaya’s Courses</h2>
+    <p class="text-center text-gray-700 mb-8">Online courses are coming soon! Meanwhile, explore curated content and playlists below.</p>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="card rounded shadow p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">Courses Title 1</h3>
+        <p class="text-sm text-gray-600 mb-4">Description of a planned courses by Jaya.</p>
+        <button disabled class="bg-gray-300 text-white px-4 py-2 rounded text-sm cursor-not-allowed">Coming Soon</button>
+      </div>
+      <div class="card rounded shadow p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">Courses Title 2</h3>
+        <p class="text-sm text-gray-600 mb-4">Mindset or spirituality courses (coming soon).</p>
+        <button disabled class="bg-gray-300 text-white px-4 py-2 rounded text-sm cursor-not-allowed">Coming Soon</button>
+      </div>
+      <div class="card rounded shadow p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">Courses Title 3</h3>
+        <p class="text-sm text-gray-600 mb-4">Another transformation-focused courses.</p>
+        <button disabled class="bg-gray-300 text-white px-4 py-2 rounded text-sm cursor-not-allowed">Coming Soon</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: YouTube Playlists -->
+  <section class="py-12 px-4 max-w-7xl mx-auto">
+    <h3 class="text-xl font-bold mb-6 text-center text-[#f4a261]">Jaya’s Own YouTube Playlists</h3>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- Repeat for each playlist -->
+      <div class="card rounded shadow p-4 text-center">
+        <img src="images/happiness.jpg" alt="Love & Marriage" class="h-40 w-full object-cover rounded mb-3">
+        <p class="font-semibold mb-2">Affirmations for Love & Marriage</p>
+        <a href="https://www.youtube.com/playlist?list=PLepyNLNX7HoPYMfGmmwEgDrraX7pvJX42" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Playlist</a>
+      </div>
+
+      <div class="card rounded shadow p-4 text-center">
+        <img src="images/wealth.jpg" alt="Wealth" class="h-40 w-full object-cover rounded mb-3">
+        <p class="font-semibold mb-2">Affirmations for Wealth | సంపదకై ధృవీకరణలు</p>
+        <a href="https://www.youtube.com/playlist?list=PLepyNLNX7HoPcAwiPIooCPax-GccFg4dk" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Playlist</a>
+      </div>
+
+      <div class="card rounded shadow p-4 text-center">
+        <img src="images/success.jpg" alt="Success" class="h-40 w-full object-cover rounded mb-3">
+        <p class="font-semibold mb-2">Affirmations for Success - విజయానికి ధృవీకరణలు</p>
+        <a href="https://www.youtube.com/playlist?list=PLepyNLNX7HoOB2zTr08d2SwXSPPUk0jJf" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Playlist</a>
+      </div>
+
+      <div class="card rounded shadow p-4 text-center">
+        <img src="images/health.jpg" alt="Health" class="h-40 w-full object-cover rounded mb-3">
+        <p class="font-semibold mb-2">Affirmations for Good Health</p>
+        <a href="https://www.youtube.com/playlist?list=PLepyNLNX7HoP88vnk7HjzltuOZmCJ47qX" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Playlist</a>
+      </div>
+
+      <div class="card rounded shadow p-4 text-center">
+        <img src="images/top5.jpg" alt="Top 5" class="h-40 w-full object-cover rounded mb-3">
+        <p class="font-semibold mb-2">Life-Changing Top 5’s Things to Do</p>
+        <a href="https://www.youtube.com/playlist?list=PLepyNLNX7HoNKPIlxdeeYGw-VFy-kTkS3" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Playlist</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section: YouTube Banner -->
+  <section class="bg-yellow-50 py-6 text-center">
+    <h3 class="text-xl font-semibold mb-2">📺 Follow Jaya on YouTube</h3>
+    <p class="text-gray-700">Discover affirmations, spiritual practices, and life tips</p>
+    <a href="https://www.youtube.com/@AffirmationswithSrija" target="_blank" class="inline-block mt-3 bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 text-sm font-semibold shadow">Visit Jaya’s YouTube Channel</a>
+  </section>
+
+  <!-- Section: Other Recommended Videos -->
+  <section class="py-12 px-4 max-w-7xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-6 text-[#f4a261]">Other Recommended Videos</h2>
+    <p class="text-center text-gray-700 mb-10">Curated by Jaya to support your journey.</p>
+
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="card rounded shadow p-4 text-center">
+        <p class="font-semibold mb-2">Purify Your Heart Chakra</p>
+        <a href="https://www.youtube.com/watch?v=m6XDUnpPd_M" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Now</a>
+      </div>
+      <div class="card rounded shadow p-4 text-center">
+        <p class="font-semibold mb-2">Release Anxiety in a Glowing Sphere</p>
+        <a href="https://www.youtube.com/watch?v=vKXlD6sqV_4" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Now</a>
+      </div>
+      <div class="card rounded shadow p-4 text-center">
+        <p class="font-semibold mb-2">Releasing Trauma as a Heavy Cloud</p>
+        <a href="https://www.youtube.com/watch?v=vKXlD6sqV_4" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Now</a>
+      </div>
+      <div class="card rounded shadow p-4 text-center">
+        <p class="font-semibold mb-2">Meet Your Super Consciousness</p>
+        <a href="https://www.youtube.com/watch?v=vGiC5bPgmpw" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Now</a>
+      </div>
+      <div class="card rounded shadow p-4 text-center">
+        <p class="font-semibold mb-2">Unlocking Abundance – Kalpa Pot</p>
+        <a href="https://www.youtube.com/watch?v=8g-Tkyo15B4" target="_blank" class="btn-primary px-4 py-2 rounded text-sm font-semibold inline-block">Watch Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-12">
+    &copy; 2025 Vedara. All rights reserved. |
+    <a href="https://www.youtube.com/@jayabanala" target="_blank" class="underline text-white">YouTube Channel</a>
+  </footer>
+
+</body>
+</html>
