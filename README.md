@@ -75,7 +75,7 @@ To deploy on GitHub Pages:
 
 ## 📬 Contact
 
-For web design or digital transformation services, visit [ElaraEdgeX](https://github.com/ElaraEdgeX) or use the [Contact Page](contact.html).
+For web design or digital transformation services, visit [ElaraEdgeX](https://ElaraEdgeX.co.uk) or use the [Contact Page](contact.html).
 
 ---
 
