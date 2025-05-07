@@ -58,21 +58,41 @@
   <header>
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-4">
-        <img src="Images/logo.png" alt="Vedara Logo" class="h-14 w-auto rounded">
+        <img src="Images/logo.png" alt="Vedara Logo" class="h-12 w-auto rounded">
         <div>
-          <h1 class="text-2xl font-bold tracking-wide text-white">Vedara</h1>
+          <h1 class="text-xl font-bold text-white">Vedara</h1>
           <p class="text-sm italic text-white">From Vedas to Vision</p>
         </div>
       </div>
+  
+      <!-- Hamburger Icon -->
+      <button class="text-white md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+  
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-6 font-medium">
-        <a href="index.html" class="underline font-semibold text-white">Home</a>
-        <a href="about.html" class="text-white hover:underline">About</a>
-        <a href="blog.html" class="text-white hover:underline">Blog</a>
-        <a href="courses.html" class="text-white hover:underline">Courses</a>
-        <a href="contact.html" class="text-white hover:underline">Contact</a>
+        <a href="index.html" class="nav-link text-white hover:underline">Home</a>
+        <a href="about.html" class="nav-link text-white hover:underline">About</a>
+        <a href="blog.html" class="nav-link text-white hover:underline">Blog</a>
+        <a href="courses.html" class="nav-link text-white hover:underline">Courses</a>
+        <a href="contact.html" class="nav-link text-white hover:underline">Contact</a>
       </nav>
     </div>
+  
+    <!-- Mobile Nav Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-[#004b57] text-white text-center py-2 space-y-2">
+      <a href="index.html" class="block">Home</a>
+      <a href="about.html" class="block">About</a>
+      <a href="blog.html" class="block">Blog</a>
+      <a href="courses.html" class="block">Courses</a>
+      <a href="contact.html" class="block">Contact</a>
+    </div>
   </header>
+  
 
   <!-- Hero Section -->
   <section id="home" class="py-12">
@@ -126,12 +146,58 @@
       </div>
     </div>
   </section>
+<!-- Testimonials Section -->
+<section class="py-12 px-4 max-w-6xl mx-auto text-center">
+  <h2 class="text-3xl font-bold mb-6 title-primary">What People Are Saying</h2>
+
+  <div class="overflow-x-auto flex space-x-6 snap-x snap-mandatory justify-center">
+    
+    <!-- Testimonial 1 - Image -->
+    <div class="snap-center w-72 shrink-0 bg-white p-4 rounded shadow text-left">
+      <img src="Images/testimonial1.jpg" alt="Testimonial 1" class="rounded w-full h-40 object-cover mb-3">
+      <p class="text-sm">"Working with Jaya changed my life for the better. She helped me realign with my spiritual purpose."</p>
+    </div>
+
+    <!-- Testimonial 2 - Video -->
+    <div class="snap-center w-72 shrink-0 bg-white p-4 rounded shadow text-left">
+      <video controls class="w-full h-40 object-cover rounded mb-3">
+        <source src="Images/testimonial2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="text-sm">"A heartfelt testimonial shared through video — real experiences, real transformation."</p>
+    </div>
+
+    <!-- Testimonial 3 - Image -->
+    <div class="snap-center w-72 shrink-0 bg-white p-4 rounded shadow text-left">
+      <img src="Images/testimonial3.jpg" alt="Testimonial 3" class="rounded w-full h-40 object-cover mb-3">
+      <p class="text-sm">"From doubt to clarity — Jaya’s guidance brought so much peace and empowerment into my life."</p>
+    </div>
+
+  </div>
+</section>
 
   <!-- Footer -->
-  <footer class="text-center py-6 mt-12">
-    &copy; 2025 Vedara. All rights reserved.<br/>
-    <span class="text-sm italic">From Vedas to Vision</span>
+  <footer class="bg-[#d6ad60] text-white text-center py-6 mt-12">
+    <div class="flex justify-center gap-5 mb-3">
+      <a href="https://www.youtube.com/channel/UCtWB9q2-c9ZVQPZ98ejIGkA" target="_blank" title="YouTube">
+        <img src="Images/Youtube.png" alt="YouTube" class="h-6 w-6">
+      </a>
+      <a href="https://www.facebook.com/people/Magical-Transformation/61561974395480/?mibextid=LQQJ4d" target="_blank" title="Facebook">
+        <img src="Images/Facebook.png" alt="Facebook" class="h-6 w-6">
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" title="Instagram">
+        <img src="Images/Instagram.png" alt="Instagram" class="h-6 w-6">
+      </a>
+      <a href="https://www.linkedin.com/in/jayasri-banala-77223414b" target="_blank" title="LinkedIn">
+        <img src="Images/linkedin.gif" alt="LinkedIn" class="h-6 w-6">
+      </a>
+    </div>
+    <div>
+      &copy; 2025 Vedara. All rights reserved.
+    </div>
   </footer>
+  
+
 
 </body>
 </html>

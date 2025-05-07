@@ -50,15 +50,35 @@
           <p class="text-sm italic text-white">From Vedas to Vision</p>
         </div>
       </div>
+  
+      <!-- Hamburger Icon -->
+      <button class="text-white md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+  
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-6 font-medium">
-        <a href="index.html" class="underline font-semibold text-white">Home</a>
-        <a href="about.html" class="text-white hover:underline">About</a>
-        <a href="blog.html" class="text-white hover:underline">Blog</a>
-        <a href="courses.html" class="text-white hover:underline">Courses</a>
-        <a href="contact.html" class="text-white hover:underline">Contact</a>
+        <a href="index.html" class="nav-link text-white hover:underline">Home</a>
+        <a href="about.html" class="nav-link text-white hover:underline">About</a>
+        <a href="blog.html" class="nav-link text-white hover:underline">Blog</a>
+        <a href="courses.html" class="nav-link text-white hover:underline">Courses</a>
+        <a href="contact.html" class="nav-link text-white hover:underline">Contact</a>
       </nav>
     </div>
+  
+    <!-- Mobile Nav Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-[#004b57] text-white text-center py-2 space-y-2">
+      <a href="index.html" class="block">Home</a>
+      <a href="about.html" class="block">About</a>
+      <a href="blog.html" class="block">Blog</a>
+      <a href="courses.html" class="block">Courses</a>
+      <a href="contact.html" class="block">Contact</a>
+    </div>
   </header>
+  
 
   <!-- Blog Post -->
   <section class="py-12 px-6 max-w-4xl mx-auto">

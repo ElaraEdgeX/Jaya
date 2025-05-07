@@ -3,37 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Jaya Banala</title>
+  <title>Contact - Vedara</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #fff1d6;
+      --header-bg: #004b57;
+      --card-bg: #ffffff;
+      --text-dark: #113f47;
+      --cta-bg: #d9939c;
+      --cta-hover: #c97885;
+      --link-color: #004b57;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      background-color: var(--header-bg);
+      color: white;
+    }
+
+    .btn-primary {
+      background-color: var(--cta-bg);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--cta-hover);
+    }
+
+    .link-highlight {
+      color: var(--link-color);
+    }
+
+    .social-icons img {
+      height: 24px;
+      width: 24px;
+    }
+
+    /* Modal styling */
+    .modal-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal {
+      background-color: white;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800">
+<body>
 
   <!-- Header -->
-  <header class="bg-blue-600 text-white">
+  <header>
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-4">
-        <img src="Images/logo.png" alt="Logo" class="h-12 w-auto">
+        <img src="Images/logo.png" alt="Vedara Logo" class="h-12 w-auto rounded">
         <div>
-          <h1 class="text-xl font-bold">Jaya Banala</h1>
-          <p class="text-sm">Life Transformation Specialist</p>
+          <h1 class="text-xl font-bold text-white">Vedara</h1>
+          <p class="text-sm italic text-white">From Vedas to Vision</p>
         </div>
       </div>
+  
+      <!-- Hamburger Icon -->
+      <button class="text-white md:hidden focus:outline-none" onclick="toggleMenu()">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+  
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-6 font-medium">
-        <a href="index.html" class="underline font-semibold text-white">Home</a>
-        <a href="about.html" class="text-white hover:underline">About</a>
-        <a href="blog.html" class="text-white hover:underline">Blog</a>
-        <a href="courses.html" class="text-white hover:underline">Courses</a>
-        <a href="contact.html" class="text-white hover:underline">Contact</a>
+        <a href="index.html" class="nav-link text-white hover:underline">Home</a>
+        <a href="about.html" class="nav-link text-white hover:underline">About</a>
+        <a href="blog.html" class="nav-link text-white hover:underline">Blog</a>
+        <a href="courses.html" class="nav-link text-white hover:underline">Courses</a>
+        <a href="contact.html" class="nav-link text-white hover:underline">Contact</a>
       </nav>
     </div>
+  
+    <!-- Mobile Nav Menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-[#004b57] text-white text-center py-2 space-y-2">
+      <a href="index.html" class="block">Home</a>
+      <a href="about.html" class="block">About</a>
+      <a href="blog.html" class="block">Blog</a>
+      <a href="courses.html" class="block">Courses</a>
+      <a href="contact.html" class="block">Contact</a>
+    </div>
   </header>
+  
 
   <!-- Contact Section -->
   <section class="py-12 px-4 max-w-3xl mx-auto">
     <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
-    <p class="text-center text-gray-600 mb-10">Have questions, feedback, or want to book a session? Send a message below.</p>
+    <p class="text-center text-gray-700 mb-10">Have questions, feedback, or want to book a session? Send a message below.</p>
 
-    <form action="https://formspree.io/f/xkgrrlna" method="POST" class="space-y-6 bg-gray-50 p-6 rounded shadow">
+    <form id="contactForm" class="space-y-6 bg-white p-6 rounded shadow">
       <div>
         <label for="name" class="block font-medium mb-1">Name</label>
         <input type="text" id="name" name="name" required class="w-full border border-gray-300 p-2 rounded">
@@ -46,24 +115,79 @@
         <label for="message" class="block font-medium mb-1">Message</label>
         <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 p-2 rounded"></textarea>
       </div>
-      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 font-semibold">Send Message</button>
+      <button type="submit" class="btn-primary px-6 py-2 rounded font-semibold">Send Message</button>
     </form>
-
-    <p class="text-sm text-center mt-6 text-gray-500">This form is powered by <a href="https://formspree.io" target="_blank" class="text-blue-600 underline">Formspree</a>. Replace the form action with your own Formspree URL.</p>
   </section>
 
+  <!-- Modal Thank You -->
+  <div id="modal" class="modal-overlay fixed inset-0 hidden flex items-center justify-center z-50">
+    <div class="modal rounded-lg shadow-lg p-8 text-center max-w-md w-full">
+      <h3 class="text-2xl font-bold mb-4 text-green-700">Thank you!</h3>
+      <p class="mb-6">Your message has been sent successfully.</p>
+      <button onclick="closeModal()" class="btn-primary px-4 py-2 rounded font-medium mr-4">Send Another</button>
+      <a href="index.html" class="text-sm underline text-gray-600">Back to Home</a>
+    </div>
+  </div>
+
   <!-- Footer -->
-  <footer class="bg-blue-600 text-white text-center py-4 mt-12">
-    &copy; 2025 Jaya Banala. All rights reserved.
+  <footer class="text-white text-center py-6 mt-12">
+    <div class="flex justify-center gap-4 mb-3 social-icons">
+      <a href="https://www.youtube.com/channel/UCtWB9q2-c9ZVQPZ98ejIGkA" target="_blank" title="YouTube">
+        <img src="Images/Youtube.png" alt="YouTube">
+      </a>
+      <a href="https://www.facebook.com/people/Magical-Transformation/61561974395480/?mibextid=LQQJ4d" target="_blank" title="Facebook">
+        <img src="Images/Facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank" title="Instagram">
+        <img src="Images/Instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/jayasri-banala-77223414b" target="_blank" title="LinkedIn">
+        <img src="Images/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+    &copy; 2025 Vedara. All rights reserved.
   </footer>
+
+  <!-- Script -->
   <script>
-    // Auto-fill message field from URL parameter (e.g. ?subject=Vedic Classes)
+    const form = document.getElementById('contactForm');
+    const modal = document.getElementById('modal');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const endpoint = "https://formspree.io/f/xkgrrlna"; // Replace with your own endpoint
+
+      try {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (response.ok) {
+          form.reset();
+          modal.classList.remove("hidden");
+        } else {
+          alert("Something went wrong. Please try again later.");
+        }
+      } catch (error) {
+        alert("An error occurred while sending your message.");
+      }
+    });
+
+    function closeModal() {
+      modal.classList.add("hidden");
+    }
+
+    // Prefill message if subject passed
     const urlParams = new URLSearchParams(window.location.search);
     const subject = urlParams.get('subject');
     if (subject) {
-      const messageField = document.getElementById('message');
-      messageField.value = `I'm interested in ${subject}. Please share more details.`;
+      document.getElementById('message').value = `I'm interested in ${subject}. Please share more details.`;
     }
   </script>
+
 </body>
 </html>
